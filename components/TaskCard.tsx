@@ -22,7 +22,7 @@ interface Props {
 }
 
 export default function TaskCard({ task, onClick }: Props) {
-  const priority = priorityConfig[task.ai_priority] ?? priorityConfig.medium;
+  const priority = priorityConfig[task.priority] ?? priorityConfig.medium;
   const status = statusConfig[task.status] ?? statusConfig.pending;
   const deadline = getDeadlineStatus(task.deadline);
 
