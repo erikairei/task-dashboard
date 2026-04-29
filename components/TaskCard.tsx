@@ -24,8 +24,7 @@ interface Props {
 export default function TaskCard({ task, onClick }: Props) {
   const priority = priorityConfig[task.priority] ?? priorityConfig.medium;
   const status = statusConfig[task.status] ?? statusConfig.pending;
-  const deadline = getDeadlineStatus(task.deadline);
-
+  const deadline = getDeadlineStatus(task.deadline ?? null);
   return (
     <div
       onClick={() => onClick(task)}
