@@ -38,7 +38,7 @@ export default function TaskCard({ task, onClick }: Props) {
           {priority.label}
         </span>
       </div>
-      <p className="text-xs text-gray-500 mb-1">{task.sender_name ?? task.sender_email}</p>
+      <p className="text-xs text-gray-500 mb-1">{task.sender_email}</p>
       {task.ai_summary && (
         <p className="text-xs text-gray-600 line-clamp-2 mb-3">{task.ai_summary}</p>
       )}
