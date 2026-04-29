@@ -6,7 +6,7 @@ import { formatDeadline, getDeadlineStatus } from '@/lib/deadline';
 interface Props {
   task: Task;
   onClose: () => void;
-  onUpdate: (id: string, updates: Partial<Task>) => void;
+  onUpdate?: (id: string, updates: Partial<Task>) => void;
   onStatusChange: (taskId: string, status: "pending" | "in_progress" | "done") => Promise<void>;
   onConfirm: (taskId: string) => Promise<void>;
 }
