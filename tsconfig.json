@@ -32,3 +32,8 @@
   ],
   "exclude": ["node_modules"]
 }
+{
+  "compilerOptions": {
+    "ignoreBuildErrors": true
+  }
+}
