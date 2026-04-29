@@ -8,7 +8,8 @@ interface Props {
   onClose: () => void;
   onUpdate: (id: string, updates: Partial<Task>) => void;
 }
-
+onStatusChange: (taskId: string, status: "pending" | "in_progress" | "done") => Promise<void>;
+onConfirm: (taskId: string) => Promise<void>;
 const statusOptions = [
   { value: 'pending', label: '未対応' },
   { value: 'in_progress', label: '対応中' },
